@@ -21,6 +21,12 @@ export const DEFAULT_USER_OP: IUserOperation = {
   };
 
   export class UserOpBuilder implements IUserOpBuilder {
+    private defaultOp: IUserOperation;
+    private currentOp: IUserOperation;
+    constructor() {
+        this.defaultOp = { ...DEFAULT_USER_OP };
+        this.currentOp = { ...this.defaultOp };
+      }
 
     getSender() {
         return "";
