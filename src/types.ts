@@ -12,7 +12,7 @@ export interface IUserOperation {
     paymasterAndData: BytesLike;
     signature: BytesLike;
   }
-export interface IUserOperationBuilder {
+export interface IUserOpBuilder {
     // get methods.
     getSender: () => string;
     getNonce: () => BigNumberish;
