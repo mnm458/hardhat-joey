@@ -50,7 +50,7 @@ Just run `npm run build` ️👷
 This README describes this boilerplate project, but won't be very useful to your
 plugin users.
 
-Take a look at `README-TEMPLATE.md` for an example of what a Hardhat plugin's
+Take a look at `README-ERC4337.md` for an example of what a Hardhat plugin's
 README should look like.
 
 ## Migrating from Buidler?
