@@ -2,7 +2,7 @@
 
 Hardhat plugin for sending ERC-4337 UserOperations. 
 
-[Hardhat](https://hardhat.org) plugin example.
+[hardhat-useroperation](https://www.npmjs.com/package/hardhat-useroperation) plugin. 
 
 ## What
 
