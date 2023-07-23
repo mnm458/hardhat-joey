@@ -1,4 +1,5 @@
 import { ethers } from "ethers";
+
 import { IUserOperation } from "../types";
 
 export const OpToJSON = (op: IUserOperation): IUserOperation => {
@@ -6,7 +7,7 @@ export const OpToJSON = (op: IUserOperation): IUserOperation => {
     .map((key) => {
       let val = (op as any)[key];
       if (typeof val !== "string" || !val.startsWith("0x")) {
-        val = ethers.toQuantity(val);
+        val = ethers.utils.hexValue(val);
       }
       return [key, val];
     })

@@ -1,4 +1,6 @@
+import { ethers } from "ethers";
 import { extendConfig, extendEnvironment } from "hardhat/config";
+import { task, types } from "hardhat/config";
 import { lazyObject } from "hardhat/plugins";
 import { HardhatConfig, HardhatUserConfig } from "hardhat/types";
 import path from "path";
@@ -42,8 +44,9 @@ extendConfig(
 );
 
 extendEnvironment((hre) => {
-  // We add a field to the Hardhat Runtime Environment here.
-  // We use lazyObject to avoid initializing things until they are actually
-  // needed.
-  hre.example = lazyObject(() => new ExampleHardhatRuntimeEnvironmentField());
+  // Use ethers directly as an object to create the provider
+  const rpcUrl =
+    "https://api.stackup.sh/v1/node/43cc2d4bea8e9faa403a27cd3d040359793c1ea519fc0fe777f0ac35bf1e5958";
+  hre.ethers = new ethers.providers.JsonRpcProvider(rpcUrl);
+  hre.userOp = new ExampleHardhatRuntimeEnvironmentField();
 });
