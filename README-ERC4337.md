@@ -30,7 +30,7 @@ require("hardhat-useroperation");
 Or if you are using TypeScript, in your `hardhat.config.ts`:
 
 ```ts
-import "hardhat-useroperation";
+import "hardhat-useroperation" ;
 ```
 
 ## Required plugins
@@ -51,7 +51,6 @@ npx hardhat buildOp
 
 ```
 npx hardhat sendOp
-
 ```
 
 ## Environment extensions
