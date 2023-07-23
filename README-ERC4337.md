@@ -1,33 +1,36 @@
 # hardhat-example-plugin
 
-_A one line description of the plugin_
+Hardhat plugin for sending ERC-4337 UserOperations. 
 
 [Hardhat](https://hardhat.org) plugin example.
 
 ## What
 
-<_A longer, one paragraph, description of the plugin_>
-
-This plugin will help you with world domination by implementing a simple tic-tac-toe in the terminal.
+Hardhat Plugin for building & sending UserOperations providing a range of different methods to use & extending the base provider:
+- buildUserOP()
+- sendUserOP()
+- HardhatBundlerProvider
+- Hardhat available tasks:
+    - buildOp
+    - sendOp
 
 ## Installation
 
-<_A step-by-step guide on how to install the plugin_>
 
 ```bash
-npm install <your npm package name> [list of peer dependencies]
+npm install hardhat-useroperation
 ```
 
 Import the plugin in your `hardhat.config.js`:
 
 ```js
-require("<your plugin npm package name>");
+require("hardhat-useroperation");
 ```
 
 Or if you are using TypeScript, in your `hardhat.config.ts`:
 
 ```ts
-import "<your plugin npm package name>";
+import "hardhat-useroperation";
 ```
 
 ## Required plugins
@@ -38,17 +41,17 @@ import "<your plugin npm package name>";
 
 ## Tasks
 
-<_A description of each task added by this plugin. If it just overrides internal
-tasks, this may not be needed_>
 
-This plugin creates no additional tasks.
-
-<_or_>
-
-This plugin adds the _example_ task to Hardhat:
+- Build an ERC4337 userOperation
 
 ```
-output of `npx hardhat help example`
+npx hardhat buildOp
+```
+- Send an ERC4337 userOperation 
+
+```
+npx hardhat sendOp
+
 ```
 
 ## Environment extensions
