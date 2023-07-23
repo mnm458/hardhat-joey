@@ -1,4 +1,4 @@
-# hardhat-example-plugin
+# hardhat-useroperation
 
 Hardhat plugin for sending ERC-4337 UserOperations. 
 
